@@ -15,6 +15,9 @@ const Home: React.FC = () => {
             <Link href="/restaurants/2/foods">Restaurants 2 Foods</Link>
           </li>
           <li>
+            <Link href="/restaurants/3/foods">Restaurants 3 Foods</Link>
+          </li>
+          <li>
             <Link href="/orders">Orders</Link>
           </li>
         </ul>
