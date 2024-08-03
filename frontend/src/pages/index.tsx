@@ -1,3 +1,5 @@
+// src/pages/index.tsx
+
 import Link from 'next/link';
 
 const Home: React.FC = () => {
@@ -7,10 +9,10 @@ const Home: React.FC = () => {
       <nav>
         <ul>
           <li>
-            <Link href="/restaurants">Restaurants List</Link>
+            <Link href="/restaurants/1/foods">Restaurants 1 Foods</Link>
           </li>
           <li>
-            <Link href="/foods">Foods List</Link>
+            <Link href="/restaurants/2/foods">Restaurants 2 Foods</Link>
           </li>
           <li>
             <Link href="/orders">Orders</Link>
