@@ -1,6 +1,15 @@
-import React, {Fragment} from 'react';
+import React, {Fragment,useEffect} from 'react';
 
-export const Restaurant: React.FC = () => {
+//api
+import { fetchRestaurants } from '../apis/restaurants';
+
+export const Restaurant = () => {
+  useEffect(() => {
+    fetchRestaurants()
+    .then((data)=>
+      console.log(data)
+    )
+  },[])
     return (
         <Fragment>
           レストラン一覧
