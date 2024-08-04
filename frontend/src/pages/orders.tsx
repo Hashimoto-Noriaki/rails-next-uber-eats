@@ -1,6 +1,6 @@
 import { Orders } from '../containers/Orders';
 
-const OrdersPage: React.FC = () => {
+const OrdersPage  = () => {
   return <Orders />;
 };
 
