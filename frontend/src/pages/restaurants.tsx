@@ -1,6 +1,6 @@
 import { Restaurant } from '../containers/Restaurants';
 
-const RestaurantsPage: React.FC = () => {
+const RestaurantsPage = () => {
     return <Restaurant />;
   };
   

@@ -1,6 +1,6 @@
 import { Foods } from '../containers/Foods';
 
-const FoodsPage: React.FC = () => {
+const FoodsPage  = () => {
   return <Foods />;
 };
 
