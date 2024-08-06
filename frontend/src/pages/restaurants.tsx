@@ -1,7 +1,7 @@
-import { Restaurant } from '../containers/Restaurants';
+import { Restaurants } from '../containers/Restaurants';
 
 const RestaurantsPage = () => {
-    return <Restaurant />;
+    return <Restaurants />;
   };
   
   export default RestaurantsPage;

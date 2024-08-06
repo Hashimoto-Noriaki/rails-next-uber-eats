@@ -13,11 +13,11 @@ interface RestaurantsState {
 }
 
 interface FetchingAction {
-  type: 'FETCHING';
+  type: typeof restaurantsActionTypes.FETCHING;
 }
 
 interface FetchSuccessAction {
-  type: 'FETCH_SUCCESS';
+  type: typeof restaurantsActionTypes.FETCH_SUCCESS;
   payload: {
     restaurants: Restaurant[];
   };
@@ -31,8 +31,8 @@ export const initialState: RestaurantsState = {
 };
 
 export const restaurantsActionTypes = {
-  FETCHING: 'FETCHING',
-  FETCH_SUCCESS: 'FETCH_SUCCESS',
+  FETCHING: 'FETCHING' as const,
+  FETCH_SUCCESS: 'FETCH_SUCCESS' as const,
 };
 
 export const restaurantsReducer = (state: RestaurantsState, action: RestaurantsAction): RestaurantsState => {
@@ -43,11 +43,9 @@ export const restaurantsReducer = (state: RestaurantsState, action: RestaurantsA
         fetchState: REQUEST_STATE.LOADING,
       };
     case restaurantsActionTypes.FETCH_SUCCESS:
-      // 型ナローイングを使用して、actionがFetchSuccessAction型であることを確認
-      const fetchSuccessAction = action as FetchSuccessAction;
       return {
         fetchState: REQUEST_STATE.OK,
-        restaurantsList: fetchSuccessAction.payload.restaurants,
+        restaurantsList: action.payload.restaurants,
       };
     default:
       throw new Error('Unknown action type');
