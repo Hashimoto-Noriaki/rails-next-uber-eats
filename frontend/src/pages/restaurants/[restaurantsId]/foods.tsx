@@ -1,4 +1,3 @@
-// pages/restaurants/[restaurantId]/foods.tsx
 import { GetServerSideProps } from 'next';
 import { fetchFoods } from '../../../apis/foods';
 import { Foods } from '../../../containers/Foods';
