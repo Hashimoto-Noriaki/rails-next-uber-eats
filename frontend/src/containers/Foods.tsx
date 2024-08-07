@@ -1,4 +1,3 @@
-// src/containers/Foods.tsx
 import React, { useState, useEffect, Fragment } from 'react';
 import { fetchFoods } from '../apis/foods';
 
